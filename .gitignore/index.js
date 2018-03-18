@@ -70,7 +70,6 @@ bot.on('message', message => {
     if(message.content === prefix + "profil"){
         var embed = new Discord.RichEmbed()
         .setTitle("=-=-=-=-=-: YOUR PROFIL :-=-=-=-=-=")
-        .setDescription("Ton profile sur le discord")
         .addField("Ton pseudo", "**"+ message.member.displayName+ "**", true)
         .addField("Ton ID", "**"+ message.member.id+ "**", true)
         .addField("Ton dernier message", "**"+ message.member.lastMessage+ "**", false)
