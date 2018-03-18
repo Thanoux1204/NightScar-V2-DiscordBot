@@ -66,6 +66,17 @@ bot.on('message', message => {
         console.log("Commande ServerInfo effectué");
 
     }
+    
+    if(message.content === prefix + "profil"){
+        var embed = new Discord.RichEmbed()
+        .setTitle("=-=-=-=-=-: YOUR PROFIL :-=-=-=-=-=")
+        .setDescription("Ton profile sur le discord")
+        .addField("Ton pseudo", "**"+ message.member.displayName+ "**", true)
+        .addField("Ton ID", "**"+ message.member.id+ "**", true)
+        .addField("Ton dernier message", "**"+ message.member.lastMessage+ "**", false)
+        message.channel.sendEmbed(embed)
+
+    }
 
     if (message.content === prefix + "infobot"){
         message.channel.sendMessage("**Name:** _NightScar_ \n **Author:** _Thanoux1204_ \n **Date de Création:** _05/03/2018_ \n **Préfix des commandes:** _<_");
