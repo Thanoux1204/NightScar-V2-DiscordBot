@@ -47,10 +47,6 @@ bot.on('message', message => {
             message.author.sendEmbed(embed);
     }
 
-    if (message.content === "Salut"){
-        message.reply("Salut ça va ?")
-        console.log("Commande de Bonjour effectué");
-    }
 
     if (message.content === prefix + "serverinfo"){
         var embed = new Discord.RichEmbed()
@@ -70,10 +66,11 @@ bot.on('message', message => {
     if(message.content === prefix + "profil"){
         var embed = new Discord.RichEmbed()
         .setTitle("=-=-=-=-=-: YOUR PROFIL :-=-=-=-=-=")
+        .setDescription("Ton profile sur le discord")
         .addField("Ton pseudo", "**"+ message.member.displayName+ "**", true)
         .addField("Ton ID", "**"+ message.member.id+ "**", true)
-        .addField("Ton dernier message", "**"+ message.member.lastMessage+ "**", false)
-        .addField("Ton avatar", +message.author.avatar, false)
+        .addField("Ton dernier message", "**"+ author.lastMessage+ "**", false)
+        .addField("Ton avatar", message.author.avatar, false)
         .setColor("A0138B")
         message.channel.sendEmbed(embed)
 
