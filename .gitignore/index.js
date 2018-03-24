@@ -61,7 +61,7 @@ bot.on('message', message => {
             message.channel.sendEmbed(embed)
         console.log("Commande ServerInfo effectué");
 
-    }
+    }});
     
 bot.on('message', message => {
   if(message.content === prefix + "profil"){
