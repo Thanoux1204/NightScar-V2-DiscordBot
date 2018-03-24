@@ -68,10 +68,10 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
         .setTitle("=-=-=-=-=-: YOUR PROFILE :-=-=-=-=-=")
         .setDescription("Ton profil sur le Discord")
-        .addField("Ton pseudo", "**"+ message.member.displayName + "**", true)
+        .addField("Ton pseudo", "**"+ message.member.username + "**", true)
         .addField("Ton ID", "**"+ message.author.id + "**", true)
         .addField("Ton dernier message", "**"+ message.author.lastMessage + "**", false)
-        .setImage("Ton avatar", message.author.avatarURL, false)
+        .setImage("Ton avatar", message.author.avatar, false)
         .setColor("A0138B")
         message.channel.sendEmbed(embed)
 
