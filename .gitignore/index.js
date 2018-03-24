@@ -23,7 +23,7 @@ bot.on('guildMemberAdd', member => {
     member.createDM().then(channel => {
     var embed = new Discord.RichEmbed()
         .setTitle("=-=-=-=-=-: BIENVENUE :-=-=-=-=-=")
-        .addField("Le nouvelle arrivant est"  + member.displayName+ "!", "Si tu a des quesstions ou des problèmes, demande à un membre du staff !", true)
+        .addField("Le nouvelle arrivant est"  + member.displayName + "!", "Si tu a des quesstions ou des problèmes, demande à un membre du staff !", true)
         .addField("Préfix des commandes : <", "permet d'afficher la page d'aide !", false)
         .addField("Nom du serveur : " + message.guild.name, "nom du serveur discord", false)
         .addField("Nombre de personnes actuel sur le discord", "**" + message.guild.memberCount+ "**", false)
@@ -66,13 +66,12 @@ bot.on('message', message => {
 bot.on('message', message => {
   if(message.content === prefix + "profil"){
         var embed = new Discord.RichEmbed()
-        var profil = message.author
         .setTitle("=-=-=-=-=-: YOUR PROFILE :-=-=-=-=-=")
         .setDescription("Ton profil sur le Discord")
         .addField("Ton pseudo", "**"+ message.member.username + "**", true)
         .addField("Ton ID", "**"+ message.author.id + "**", true)
         .addField("Ton dernier message", "**"+ message.author.lastMessage + "**")
-        .addField("Ton avatar", profil.avatar)
+        .addField("Ton avatar", message.author.avatar)
         .setColor("A0138B")
         message.channel.sendEmbed(embed)
 
