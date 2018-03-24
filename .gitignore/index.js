@@ -63,18 +63,19 @@ bot.on('message', message => {
 
     }
     
-    if(message.content === prefix + "profil"){
+bot.on('message', message => {
+  if(message.content === prefix + "profil"){
         var embed = new Discord.RichEmbed()
         .setTitle("=-=-=-=-=-: YOUR PROFIL :-=-=-=-=-=")
         .setDescription("Ton profile sur le discord")
-        .addField("Ton pseudo", "**"+ message.member.displayName+ "**", true)
-        .addField("Ton ID", "**"+ message.member.id+ "**", true)
-        .addField("Ton dernier message", "**"+ author.lastMessage+ "**", false)
+        .addField("Ton pseudo", "**"+ message.member.displayName + "**", true)
+        .addField("Ton ID", "**"+ message.member.id + "**", true)
+        .addField("Ton dernier message", "**"+ author.lastMessage + "**", false)
         .addField("Ton avatar", message.author.avatar, false)
         .setColor("A0138B")
         message.channel.sendEmbed(embed)
 
-    }
+    }})
 
     if (message.content === prefix + "infobot"){
         message.channel.sendMessage("**Name:** _NightScar_ \n **Author:** _Thanoux1204_ \n **Date de Création:** _05/03/2018_ \n **Préfix des commandes:** _<_");
