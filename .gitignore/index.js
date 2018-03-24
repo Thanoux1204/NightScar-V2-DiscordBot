@@ -75,7 +75,7 @@ bot.on('message', message => {
         .setColor("A0138B")
         message.channel.sendEmbed(embed)
 
-    }})
+    }
 
     if (message.content === prefix + "infobot"){
         message.channel.sendMessage("**Name:** _NightScar_ \n **Author:** _Thanoux1204_ \n **Date de Création:** _05/03/2018_ \n **Préfix des commandes:** _<_");
