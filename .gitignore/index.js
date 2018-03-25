@@ -49,10 +49,6 @@ bot.on('message', message => {
             message.author.sendEmbed(embed);
     }
 
-    if (message.content === "Salut"){
-        message.reply("Salut ça va ?")
-        console.log("Commande de Bonjour effectué");
-    }
 
     if (message.content === prefix + "serverinfo"){
         var embed = new Discord.RichEmbed()
