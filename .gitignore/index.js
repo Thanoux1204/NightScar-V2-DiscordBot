@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 const config = require("./config.json");
 const fs = require("fs")
 
-var prefix = ("<")
+const prefix = ("<")
 
 bot.on('ready', function(member) {
     bot.user.setGame("Command: <help");
