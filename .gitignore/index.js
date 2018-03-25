@@ -19,7 +19,7 @@ bot.on('ready', function(member) {
         bot.channels.get('423183261234233344').sendEmbed(embed)
 });
  
-bot.login(Process.env.TOKEN);
+bot.login(process.env.TOKEN);
 
 bot.on('guildMemberAdd', member => {
     member.createDM().then(channel => {
