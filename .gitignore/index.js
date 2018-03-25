@@ -75,7 +75,7 @@ bot.on('message', message => {
         //.addField("Ton avatar", message.author.avatar, false)
         .setColor("A0138B")
         .setThumbnail(message.author.avatarURL)
-	.setTimestamp())
+	.setTimestamp()
         message.channel.sendEmbed(embed)
 
     }
