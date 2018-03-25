@@ -73,6 +73,8 @@ bot.on('message', message => {
         .addField("Ton ID", "**"+ message.member.id+ "**", true)
         .addField("Ton dernier message", "**" + message.author.lastMessage + "**", false)
         .addField("Ton avatar", message.author.avatarURL, false)
+        .setFooter(bot.user.avatarURL)
+        .setTimestamp()
         .setColor("A0138B")
         message.channel.sendEmbed(embed)
 
