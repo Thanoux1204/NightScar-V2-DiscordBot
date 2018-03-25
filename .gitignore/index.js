@@ -65,17 +65,17 @@ bot.on('message', message => {
 
     }
 
-    if(message.content === prefix + "profil"){
+     if(message.content === prefix + "profil"){
         var embed = new Discord.RichEmbed()
         .setTitle("=-=-=-=-=-: YOUR PROFIL :-=-=-=-=-=")
         .setDescription("Ton profile sur le discord")
         .addField("Ton pseudo", "**"+ message.member.displayName+ "**", true)
         .addField("Ton ID", "**"+ message.member.id+ "**", true)
         .addField("Ton dernier message", "**" + message.author.lastMessage + "**", false)
-        .addField("Ton avatar", message.author.avatarURL, false)
-        .setFooter(bot.user.avatarURL)
-        .setTimestamp()
-        .setColor("A0138B")
+        //.addField("Ton avatar", message.author.avatar, false)
+        .setColor("A0138B"
+        .setThumnail(message.author.avatarURL)
+				.setTimestamp())
         message.channel.sendEmbed(embed)
 
     }
