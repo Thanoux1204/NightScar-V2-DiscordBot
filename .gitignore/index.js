@@ -75,7 +75,7 @@ bot.on('message', message => {
         .setDescription("Ton profile sur le discord")
         .addField("Ton pseudo", "**"+ message.member.displayName+ "**", true)
         .addField("Ton ID", "**"+ message.member.id+ "**", true)
-        .addField("Ton dernier message", "**"+ author.lastMessage+ "**", false)
+        .addField("Ton dernier message", "**" + message.author.lastMessage + "**", false)
         .addField("Ton avatar", message.author.avatar, false)
         .setColor("A0138B")
         message.channel.sendEmbed(embed)
