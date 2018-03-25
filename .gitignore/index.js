@@ -76,7 +76,7 @@ bot.on('message', message => {
         .setColor("A0138B")
         .setThumbnail(message.author.avatarURL)
 	.setTimestamp()
-	.setFooter(bot.user.avatarURL, " NightScar © ThxProduction 2018")
+	.setFooter("NightScar © ThxProduction 2018",bot.user.avatarURL)
         message.channel.sendEmbed(embed)
 
     }
