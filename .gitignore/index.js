@@ -120,9 +120,9 @@ bot.on('message', message => {
                 var embed = new Discord.RichEmbed()
                     .setDescription("Sondage")
                     .addField(thingToEcho, "répondre avec :white_check_mark: ou :x:")
-                    .seColor("0xB40404")
+                    .setColor("0xB40404")
                     .setTimestamp()
-                messgae.guild.channels.find("name", "sondages").send(embed)
+                message.guild.channels.find("name", "sondages").send(embed)
                 .then(function (message) {
                     message.react(":white_check_mark:")
                     message.react(":x:")
