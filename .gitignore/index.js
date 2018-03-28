@@ -111,7 +111,6 @@ bot.on('message', message => {
       }
     }
 
-    bot.on("message", message => {
         if(message.content.startsWith(prefix +"sondage")) {
             if(message.author.id == '304308896581812246') {
                 let args = messgae.content.split(" ").slice(1);
@@ -129,6 +128,6 @@ bot.on('message', message => {
                 });
                 }else{
                     return message.reply("Tu n'as pas la permission :/")
-                }}})
+                }})
 
 });
