@@ -100,25 +100,23 @@ bot.on('message', message => {
     }
 
 
-    bot.on('message', message => {
+
         if(message.content.startsWith(prefix +"sondage")) {
             if(message.author.id == '304308896581812246') {
-                let args = message.content.split(" ").slice(1);
+                let args = messgae.content.split(" ").slice(1);
                 let thingToEcho = args.join(" ")
                 var embed = new Discord.RichEmbed()
                     .setDescription("Sondage")
                     .addField(thingToEcho, "répondre avec :white_check_mark: ou :x:")
-                    .setColor("0xB40404")
+                    .seColor("0xB40404")
                     .setTimestamp()
-                message.guild.channels.find("name", "sondages").send(embed)
+                messgae.guild.channels.find("name", "sondages").send(embed)
                 .then(function (message) {
                     message.react(":white_check_mark:")
                     message.react(":x:")
                 }).catch(function() {
-                });
                 }else{
-                    return message.reply("Tu n'as pas la permission")
+                    return message.reply("Tu n'as pas la permission :/")
                 }}})
-
 
 });
