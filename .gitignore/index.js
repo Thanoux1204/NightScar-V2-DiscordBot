@@ -121,7 +121,7 @@ bot.on('message', message => {
                     .addField(thingToEcho, "répondre avec :white_check_mark: ou :x:")
                     .seColor("0xB40404")
                     .setTimestamp()
-                messgae.guild.channels.find("name", "sondage").send(embed)
+                messgae.guild.channels.find("name", "sondages").send(embed)
                 .then(function (message) {
                     message.react(":white_check_mark:")
                     message.react(":x:")
