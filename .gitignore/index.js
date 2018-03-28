@@ -113,9 +113,9 @@ bot.on('message', message => {
     }
 
     bot.on('message', message => {
-        if(message.content.startsWith(prefix +"sondages")) {
+        if(message.content.startsWith(prefix +"sondage")) {
             if(message.author.id == '304308896581812246') {
-                let args = messgae.content.split(" ").slice(1);
+                let args = message.content.split(" ").slice(1);
                 let thingToEcho = args.join(" ")
                 var embed = new Discord.RichEmbed()
                     .setDescription("Sondage")
