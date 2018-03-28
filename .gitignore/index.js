@@ -125,7 +125,6 @@ bot.on('message', message => {
                     message.react(":white_check_mark:")
                     message.react(":x:")
                 }).catch(function() {
-                });
                 }else{
                     return message.reply("Tu n'as pas la permission :/")
                 }}})
