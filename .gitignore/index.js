@@ -112,6 +112,7 @@ bot.on('message', message => {
       }
     }
 
+    bot.on('message', message => {
         if(message.content.startsWith(prefix +"sondages")) {
             if(message.author.id == '304308896581812246') {
                 let args = messgae.content.split(" ").slice(1);
@@ -121,14 +122,15 @@ bot.on('message', message => {
                     .addField(thingToEcho, "répondre avec :white_check_mark: ou :x:")
                     .seColor("0xB40404")
                     .setTimestamp()
-                messgae.guild.channels.find("name", "sondages").send(embed)
+                messgae.guild.channels.find("name", "sondage").send(embed)
                 .then(function (message) {
                     message.react(":white_check_mark:")
                     message.react(":x:")
                 }).catch(function() {
-		} else {
-                    return message.reply("Tu n'as pas la permission :/")
+                });
+                }else{
+                    return message.reply("Tu n'as pas la permission")
                 }}})
-}
+
 
 });
