@@ -94,11 +94,11 @@ bot.on('message', message => {
         if(message.author.id == "304308896581812246"){
       
         message.channel.send(args.join(` `))
-        }else{
+        } else {
         message.reply("```Vous ne pouvez pas utiliser cette commande.```");
         }
     }
-}
+
 
     if(message.content.startsWith(config.prefix + "prefix")) {
         if(message.author.id == "304308896581812246"){
@@ -126,7 +126,7 @@ bot.on('message', message => {
                     message.react(":white_check_mark:")
                     message.react(":x:")
                 }).catch(function() {
-                }else{
+                } else {
                     return message.reply("Tu n'as pas la permission :/")
                 }}})
 }
