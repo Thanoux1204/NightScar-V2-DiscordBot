@@ -98,6 +98,7 @@ bot.on('message', message => {
         message.reply("```Vous ne pouvez pas utiliser cette commande.```");
         }
     }
+}
 
     if(message.content.startsWith(config.prefix + "prefix")) {
         if(message.author.id == "304308896581812246"){
