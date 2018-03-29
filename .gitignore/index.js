@@ -24,7 +24,7 @@ bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
     if (message.content === prefix + "help"){
-	  message.channel.sendMessage("/!\ MAINTENANCE EN COURS /!\")
+	  message.channel.sendMessage("/!\ MAINTENANCE EN COURS /!\");
        // message.channel.sendMessage("📩 la page d'aide vous a été envoyé en message privé ! 👍")
         //var embed = new Discord.RichEmbed()
           //  .setTitle("=-=-=-=-=-: PAGE D'AIDE :-=-=-=-=-=")
