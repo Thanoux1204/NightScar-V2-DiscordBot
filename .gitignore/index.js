@@ -6,7 +6,7 @@ const fs = require("fs")
 const prefix = "<"
 
 bot.on('ready', function(member) {
-    bot.user.setGame("Command: <help");
+    bot.user.setGame("MAINTENANCE EN COURS");
     console.log("Connectedç");
    // var embed = new Discord.RichEmbed()
        // .setTitle("=-=-=-=-=-: RELEASE 2.1.0 :-=-=-=-=-=")
