@@ -25,5 +25,6 @@ bot.login(process.env.TOKEN);
 bot.on('message', message => {
 	if (message.content === prefix + "help"){
 		message.channel.sendMessage("! MAINTENANCE EN COURS !");
+		if (msg.channel.type === "dm") return;
 	}
 })
