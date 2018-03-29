@@ -21,20 +21,6 @@ bot.on('ready', function(member) {
  
 bot.login(process.env.TOKEN);
 
-bot.on('guildMemberAdd', member => {
-    member.createDM().then(channel => {
-    var embed = new Discord.RichEmbed()
-        //.setTitle("=-=-=-=-=-: BIENVENUE :-=-=-=-=-=")
-        //.addField("Le nouvelle arrivant est"  + member.displayName+ "!", "Si tu a des quesstions ou des problèmes, demande à un membre du staff !", true)
-        //.addField("Préfix des commandes : <", "permet d'afficher la page d'aide !", false)
-        //.addField("Nom du serveur : " + message.guild.name, "nom du serveur discord", false)
-        //.addField("Nombre de personnes actuel sur le discord", "**" + message.guild.memberCount+ "**", false)
-        //.setColor("BBB304")
-        //.setFooter("Bon jeu parmis nous ^^")  
-      //return channel.send(embed)
-    //}).catch(console.error)
-    // On pourrait catch l'erreur autrement ici (l'utilisateur a peut être désactivé les MP)
-  })
 
 bot.on('message', message => {
     if (message.content === prefix + "help"){
