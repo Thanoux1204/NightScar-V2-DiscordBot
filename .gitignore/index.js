@@ -132,10 +132,6 @@ bot.on('message', message => {
                     return message.reply("Tu n'as pas la permission")
                 }}})
 
-                bot.on('message', message => {
-                    if (message.content === prefix + "help"){
-                      message.channel.sendMessage("! MAINTENANCE EN COURS !");
-                    }
                 })
                     
                 
