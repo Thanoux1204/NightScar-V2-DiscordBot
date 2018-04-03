@@ -133,7 +133,6 @@ bot.on('message', message => {
                 }}})
 
                     
-}
 
 
 });
