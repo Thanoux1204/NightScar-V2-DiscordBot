@@ -8,15 +8,7 @@ const prefix = "<"
 bot.on('ready', function(member) {
     bot.user.setGame("Command: <help");
     console.log("Connectedç");
-    var embed = new Discord.RichEmbed()
-        .setTitle("=-=-=-=-=-: RELEASE 2.2.0 :-=-=-=-=-=")
-        .setDescription("Page d'annonce des mises à jour du bot")
-        .addField("- Sondage [BETA]","permet de crée des sondage ! La commande est encore en développement, des bug sont toujours présents", true)
-        .addField("- Nouveau logo","Le bot a un nouveau logo !", false)
-        .addField("- SOON", "A venir", false)
-        .setColor("289305")
-        .setFooter("Bon jeu parmis nous ^^")
-        bot.channels.get('423183261234233344').sendEmbed(embed)
+    
 });
  
 bot.login(process.env.TOKEN);
